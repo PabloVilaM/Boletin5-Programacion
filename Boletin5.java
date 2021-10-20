@@ -22,17 +22,30 @@ public class Boletin5 {
        float velocidad = segundoConsumo.GetvMedia();
         System.out.println("La velocidad media es : " + velocidad);
        
-       //Lo de arriba seria la manera de hacerlo con Setters y las funcones creadas, ahora voy a pedir las cosas por teclado.
+       //Lo de arriba seria la manera de hacerlo con Setters y las funcones creadas(como dice el ejercicio), ahora voy a pedir las cosas por teclado.
        
        Consumo tercerConsumo = new Consumo();
        Scanner sc = new Scanner(System.in);
        
         System.out.println("Dime los km y el precio al que esta la gasolina/litro");
        double km = sc.nextDouble();
-       float precio = sc.nextFloat(); //Supondremos que el usuario da los valores que solicita el ejercicio.
+       float precio = sc.nextFloat(); //Supondremos que el usuario da los valores que solicita el ejercicio que tecnicamente no se hace nada mas con este primer objeto
        
-       Consumo cuartoConsumo = new Consumo(200,500f,120f,1.60f);
-       System.out.println("El consumo medio es : " + cm);
+       //---------------------------------------------
+       
+        System.out.println("Dime los datos de tu viaje (km, litros, vmedia y pGas");
+        double km2 = sc.nextDouble();
+        float litr2 = sc.nextFloat();
+        float vmedia2 = sc.nextFloat();
+        float pGas2 = sc.nextFloat();
+        
+        
+       
+       Consumo cuartoConsumo = new Consumo(km2,litr2,vmedia2,pGas2);
+       
+       double cm2 = cuartoConsumo.consumoMedio(km2, pGas2);
+        System.out.println("El consumo medio es : " + cm2);
+        
         System.out.println("Dime os litros que queres e a velocidade media");
       float vm = sc.nextFloat();
       float l = sc.nextFloat();
